@@ -45,8 +45,8 @@ class DefaultController extends Controller {
 	public function execSqlFile($sqlFile) {
 		$message = "file not found";
 		
-		if (file_exists ( DB_BACKUP_FILE_PATH.DIRECTORY_SEPARATOR.$sqlFile )) {
-			$sqlArray = file_get_contents ( DB_BACKUP_FILE_PATH.DIRECTORY_SEPARATOR.$sqlFile  );
+		if (file_exists ( $sqlFile )) {
+			$sqlArray = file_get_contents ( $sqlFile  );
 			
 			$cmd = \Yii::$app->db->createCommand ( $sqlArray );
 			try {
