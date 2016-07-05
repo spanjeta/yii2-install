@@ -1,0 +1,21 @@
+{
+    "name": "spanjeta/yii2-install",
+    "description": "Database Installer for every Site",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","database","installer"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Shiv Charan Panjeta",
+            "email": "shivcharan.panjeta@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "spanjeta\\modules\\install\\": ""
+        }
+    }
+}
