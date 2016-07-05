@@ -1,7 +1,6 @@
 <?php
 
 namespace spanjeta\modules\install;
-define('SQL_FILE_PATH',__DIR__.'/db/install.sql');
 /**
  * install module definition class
  */
