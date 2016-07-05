@@ -39,8 +39,10 @@ Add to modules
 
 Add to index.php file 
 ```php
+defined ( 'YII_ENV' ) or define ( 'YII_ENV', 'YOUR_ENVIRONMENT_NAME (dev/prod)' );
 defined ( 'SQL_FILE_PATH' ) or define ( 'SQL_FILE_PATH', 'PATH_OF_YOUR_SQL_FILE' );
-
+defined ( 'DB_CONFIG_PATH' ) or define ( 'DB_CONFIG_PATH', dirname ( __FILE__ ) . '/config/' );
+defined ( 'DB_CONFIG_FILE_PATH' ) or define ( 'DB_CONFIG_FILE_PATH', DB_CONFIG_PATH . YII_ENV . '-db' . '.php' );
 ```
 
 Pretty Url's ```/install```
