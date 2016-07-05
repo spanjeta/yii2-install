@@ -39,7 +39,7 @@ Add to modules
 
 Save your SQL file in **_backup** folder with the name of "db_backup.sql".
 
-Add to config.php file 
+Add to web.php file 
 ```php
 
 defined ( 'SQL_FILE_PATH' ) or define ( 'SQL_FILE_PATH', dirname ( __FILE__ ) .'/../_backup/db_backup.sql' );
