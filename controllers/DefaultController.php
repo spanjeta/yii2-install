@@ -108,17 +108,10 @@ class DefaultController extends Controller {
 					$message = $this->execSqlFile ( $this->module->sqlfile );
 					
 					if ($message == 'ok') {
-						$count = User::find ()->count ();
-						if ($count == 0) {
-							\Yii::$app->session->setFlash ( 'success', 'Database setup successfully!' );
-								return $this->redirect ( [ 
-									'/user/add-admin' 
-							] );
-						} else {						
-							return $this->redirect ( [ 
-									'/user/login' 
-							] );
-						}
+						\Yii::$app->session->setFlash ( 'success', 'Database setup successfully!' );
+						return $this->redirect ( [ 
+								'/' 
+						] );
 					} else {
 						unlink ( DB_CONFIG_FILE_PATH );
 						\Yii::$app->session->setFlash ( 'error', $message );
